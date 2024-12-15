@@ -1,0 +1,34 @@
+.bg-image {
+  background-image: url('css-hmif/image/rame.JPG'); /* Ganti dengan path gambar Anda */
+  background-size: cover;   /* Pastikan gambar menutupi area */
+  background-position: center; /* Pusatkan gambar */
+  background-repeat: no-repeat; /* Hindari pengulangan gambar */
+  height: 80vh; /* Menutupi tinggi layar penuh */
+  position: relative;
+}
+
+/* Overlay Gelap */
+.bg-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Overlay warna hitam transparan */
+  z-index: 1;
+}
+
+/* Teks di atas overlay */
+.bg-image div {
+  position: relative;
+  z-index: 2; /* Agar teks di atas overlay */
+}
+
+.containertn{
+  display: flex;
+
+  border: 5px solid #e6e6e6; /* Border pada container */
+  border-radius: 10px; /* Opsional: membuat sudut border melengkung */
+  overflow: hidden; /* Memastikan konten tetap di dalam border */
+}
